@@ -1,0 +1,13 @@
+{
+  "name": "alarm-clock",
+  "description": "a simple alarm clock",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  }
+}
