@@ -1,14 +1,13 @@
-var Alarm = function() {
-  this.time = moment();
-  this.userAlarmTime = alarmTime;
-};
+function Clock(time) {
+  this.time = time;
+}
 
-Alarm.prototype.currentTime = function() {
-  if (CurrentTime === userAlarmTime) {
-    //add moment.js thing.
-    console.log(this.time);
+Clock.prototype.setAlarm = function(setAlarm) {
+  var alarm = false;
+  if((moment(this.time).format("HH:mm")) === setAlarm) {
+    alarm = true;
   }
+  return alarm;
 };
 
-
-exports.alarmModule = Alarm;
+exports.alarmModule = Clock;

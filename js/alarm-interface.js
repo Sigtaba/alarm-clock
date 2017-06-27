@@ -1,11 +1,19 @@
-var Alarm = require('./../js/alarm.js').alarmModule;
+var Clock = require('./../js/alarm.js').alarmModule;
 
-$(document).ready(function() {
-  $('#alarmForm').submit(function(event) {
+$(document).ready(function(){
+  $("#alarmForm").submit(function(event) {
     event.preventDefault();
-    var hours = parseInt($('#hours').val());
-    var minutes = parseInt($('#minutes').val());
-    var alarmClock = new Alarm("alarm1");
-    var time = alarmClock.currentTime(time);
+    var newClock = new Clock();
+    var userAlarm = $("#setAlarm").val();
+    var countdown = setInterval(alarmTimer, 1000);
+
+    function alarmTimer() {
+      console.log(newClock.setAlarm(userAlarm));
+      if (newClock.setAlarm(userAlarm) === true) {
+        $("#output").html("wake up");
+        clearInterval(countdown);
+      }
+    }
+    $("#output").html(userAlarm);
   });
-})
+});

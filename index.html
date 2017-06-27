@@ -8,19 +8,17 @@
   <body>
     <div class="container">
       <h1>Alarm Clock</h1>
-      <div id="clock">
-      </div>
+      <div id="clock"></div>
       <form id="alarmForm">
         <div class="form-group">
-          <label for="hours"></label>
-          <input type="number" name="hours" id="hours">
+          <label for="time">Set Alarm</label>
+          <input type="time" name="time" id="setAlarm">
         </div>
-        <div class="form-group">
-          <label for="minutes"></label>
-          <input type="number" name="minutes" id="minutes">
-        </div>
-        <button class="btn-success" id="setTime" type="submit">Set Time</button>
+        <button class="btn-success" id="set" type="submit">Set Time</button>
       </form>
+      <div id="output">
+
+      </div>
     </div>
   </body>
 </html>
